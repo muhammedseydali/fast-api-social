@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 
 Follow = Table("follows", 
                Base.metadata,
-               Column("follower_id", Integer, ForeignKey("users.id"), primary_key=True)
+               Column("follower_id", Integer, ForeignKey("users.id"), primary_key=True),
                Column("followee_id", Integer, ForeignKey("users.id"), primary_key=True)
                )
 
